@@ -19,12 +19,10 @@ For more information on using dev containers see this [tutorial](https://atlas-j
 ### Important Files/Folders
 
 - `src`: All javascript/jsx code goes in this directory
-- `src/assets`: Any static assets such as images that are loaded through the javascript files goes here.
-- `index.html`: This is the html file that appears when the dev server starts up.
 
 ### Important Commands
 
-- `npm run dev`: Starts dev server with Hot Module Reloading on port 3000. Anytime a file changes, the changes will automatocally be reflected in the browser
+- `npm run dev`: Starts dev server with [Storybook](https://storybook.js.org/) on port 3000.
 - `npm run lint`: Run the lint checker with eslint to check for known linting issues
 - `npm run format`: Run prettier to automatically reformat files
 
