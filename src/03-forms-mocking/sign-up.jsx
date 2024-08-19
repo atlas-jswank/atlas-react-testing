@@ -3,7 +3,6 @@ import { validateEmail, validatePassword } from "./validate";
 import { EmailInput } from "./email";
 import { PasswordInput } from "./password";
 import "../global.css";
-import "./sign-up.css";
 
 export const SignUp = ({ onSubmit }) => {
   const [email, setEmail] = useState("");
@@ -17,14 +16,18 @@ export const SignUp = ({ onSubmit }) => {
   const error =
     validateEmail(email) !== "" || validatePassword(password) !== "";
   return (
-    <div className="login">
-      <div className="login-box">
-        <h2>Sign Up</h2>
-        <p>Sign up to access the app</p>
+    <div className="flex flex-col items-center">
+      <div className="login-box bg-[#fef9e6] rounded-[30px] p-8 text-[#00003c]">
+        <h2 className="text-4xl font-bold">Sign Up</h2>
+        <p className="text-lg">Sign up to access the app</p>
         <form onSubmit={handleLoginSubmit}>
           <EmailInput onChange={(value) => setEmail(value)} />
           <PasswordInput onChange={(value) => setPassword(value)} />
-          <button disabled={error} type="submit">
+          <button
+            disabled={error}
+            type="submit"
+            className="btn bg-[#d00414] disabled:bg-[#00003c] mt-4"
+          >
             Sign Up
           </button>
         </form>

@@ -13,7 +13,9 @@ export function EmailInput({ onChange }) {
 
   return (
     <div>
-      <label htmlFor="email">Email: </label>
+      <label htmlFor="email" className="block py-4 font-black">
+        Email:
+      </label>
       <input
         type="text"
         name="email"
@@ -21,8 +23,9 @@ export function EmailInput({ onChange }) {
         autoComplete="email"
         value={email}
         onChange={handleEmailChange}
+        className="w-[480px] rounded-full border-2 border-[#00003c] py-2 px-4"
       ></input>
-      <div className="error">{error}</div>
+      <div className="text-[#d00414] text-[0.8em]">{error}</div>
     </div>
   );
 }

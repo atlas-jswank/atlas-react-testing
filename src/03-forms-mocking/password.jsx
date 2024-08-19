@@ -13,7 +13,9 @@ export function PasswordInput({ onChange }) {
 
   return (
     <div>
-      <label htmlFor="password">Password: </label>
+      <label htmlFor="password" className="block py-4 font-black">
+        Password:
+      </label>
       <input
         type="password"
         name="password"
@@ -21,8 +23,9 @@ export function PasswordInput({ onChange }) {
         autoComplete="true"
         value={password}
         onChange={handlePasswordChange}
+        className="w-[480px] rounded-full border-2 border-[#00003c] py-2 px-4"
       ></input>
-      <div className="error">{error}</div>
+      <div className="text-[#d00414] text-[0.8em]">{error}</div>
     </div>
   );
 }
