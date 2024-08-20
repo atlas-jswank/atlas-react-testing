@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { validateEmail } from "./validate";
 
-export function EmailInput({ onChange }) {
+type EmailInputProps = {
+  onChange: (value: string) => void;
+};
+
+export function EmailInput({ onChange }: EmailInputProps) {
   const [email, setEmail] = useState("");
 
-  function handleEmailChange(e) {
+  function handleEmailChange(e: ChangeEvent<HTMLInputElement>) {
     setEmail(e.target.value);
     onChange(e.target.value);
   }

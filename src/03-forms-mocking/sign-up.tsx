@@ -1,14 +1,18 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { validateEmail, validatePassword } from "./validate";
 import { EmailInput } from "./email";
 import { PasswordInput } from "./password";
 import "../global.css";
 
-export const SignUp = ({ onSubmit }) => {
+type SignUpProps = {
+  onSubmit?: (email: string, password: string) => void;
+};
+
+export const SignUp = ({ onSubmit }: SignUpProps) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleLoginSubmit(e) {
+  function handleLoginSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     onSubmit && onSubmit(email, password);
   }

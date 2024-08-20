@@ -1,8 +1,12 @@
-import { useState } from "react";
+import React from "react";
 import "../global.css";
 
-export function Counter({ initialValue = 0 }) {
-  const [count, setCount] = useState(initialValue);
+type CounterProps = {
+  initialValue?: number;
+};
+
+export function Counter({ initialValue = 0 }: CounterProps) {
+  const [count, setCount] = React.useState(initialValue);
 
   function increment() {
     setCount(count + 1);

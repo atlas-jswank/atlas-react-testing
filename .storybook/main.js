@@ -1,10 +1,10 @@
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
   stories: [
-    "../src/01-snapshot-tests/expand.stories.js",
-    "../src/02-testing-library/counter.stories.js",
-    "../src/03-forms-mocking/sign-up.stories.js",
-    "../src/04-hooks/use-pagination.stories.jsx",
+    "../src/01-snapshot-tests/expand.stories.ts",
+    "../src/02-testing-library/counter.stories.ts",
+    "../src/03-forms-mocking/sign-up.stories.ts",
+    "../src/04-hooks/use-pagination.stories.tsx",
   ],
 
   addons: [

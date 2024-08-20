@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-export function usePagination({ data, pageSize }) {
+type UsePaginationProps<T> = {
+  data: T[];
+  pageSize: number;
+};
+
+export function usePagination<T>({ data, pageSize }: UsePaginationProps<T>) {
   const [page, setPage] = useState(1);
 
   function next() {

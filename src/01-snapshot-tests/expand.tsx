@@ -1,7 +1,17 @@
 import React from "react";
 import "../global.css";
 
-export default function Expand({ title, defaultOpen = false, children }) {
+type ExpandProps = {
+  title: string;
+  defaultOpen?: boolean;
+  children: React.ReactNode;
+};
+
+export default function Expand({
+  title,
+  defaultOpen = false,
+  children,
+}: ExpandProps) {
   const [showing, setShowing] = React.useState(defaultOpen);
   const icon = showing ? <DownChevron /> : <RightChevron />;
   return (
